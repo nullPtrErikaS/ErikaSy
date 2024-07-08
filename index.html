@@ -6,73 +6,157 @@
     
     <title>Sy, E. - Personal Website</title>
     <link rel="icon" type="image/jpeg" href="mirio.jpg">
-    
-    <link rel="stylesheet" href="styles.css">
-<style>
+    <style>
         body {
-            background-color: white;
+            display: flex;
+            flex-direction: column;
+            margin: 0;
+            padding: 0;
+            align-items: center;
+            font-family: Arial, sans-serif; /* Added a font-family for better appearance */
+        }
+        nav {
+            width: 80%;
+            background-color: #f0f0f0;
+            padding: 10px 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            position: relative;
+            margin-top: 150px; /* Adjusted position to move the navigation bar down */
+            border-radius: 20px; /* Rounded corners */
+            overflow: hidden; /* Ensure content doesn't overflow rounded corners */
+        }
+        .nav-list {
+            list-style: none;
+            display: flex;
+            justify-content: space-around;
+            padding: 0;
+            margin: 0;
+        }
+        .nav-list li {
+            margin: 0;
+        }
+        .nav-list a {
+            text-decoration: none;
+            color: #333;
+            font-size: 1em;
+            padding: 5px 10px;
+        }
+        .nav-list a:hover {
+            background-color: #ddd;
+            border-radius: 5px;
+        }
+        .content {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            width: 100%;
+            height: 25vh; /* 1/4 of the viewport height */
+            max-height: 250px; /* Maximum height for the profile picture */
+            padding: 0 10vw; /* Add some padding on the sides */
+            box-sizing: border-box; /* Include padding and border in the element's total width and height */
+            margin-top: 20vh; /* Adjusted position to move the content down */
+        }
+        .text-content {
+            flex: 1;
+            padding-right: 300px; /* Add padding to the right for headers */
+            max-width: calc(80% - 40px); /* Ensure text content does not exceed the navigation bar width */
+            text-align: left; /* Left-align the text */
+            margin-top: 0; /* Removed top margin to fit content properly */
+        }
+        h1, h3 {
+            margin: 0;
+        }
+        h1 {
+            font-size: 5em;
+        }
+        h3 {
+            font-size: 1.4em;
+            margin-bottom: 0.5em; /* Add space between h3 and h1 */
+        }
+        p {
+            line-height: 2;
+            font-size: 1em;
+            margin-top: 90px; /* Add space between the heading and paragraph */
+            text-align: center; /* Center-align the text */
+            padding-left: 100px; /* Add padding to the left for space between the screen edge and paragraph */
+            padding-right: 30px; /* Add padding to the right to avoid text from touching the edge */
+            max-width: calc(80% - 60px); /* Ensure the paragraph text stays within the navigation bar width */
+        }
+        .profile-pic-container {
+            flex: 1;
+            display: flex;
+            justify-content: flex-end;
+            padding-right: 30px; /* Ensure there's space between the profile picture and the content */
+            align-items: center; /* Center-align the profile picture vertically */
+            margin-top: 20vh;
+        }
+        .profile-pic {
+            width: 25vw;
+            height: 25vw;
+            max-width: 250px;
+            max-height: 250px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            object-fit: cover;
+        }
+        @media (max-width: 768px) {
+            .profile-pic {
+                width: 30vw;
+                height: 30vw;
+                max-width: 300px;
+                max-height: 300px;
+            }
+        }
+        @media (max-width: 480px) {
+            .profile-pic {
+                width: 35vw;
+                height: 35vw;
+                max-width: 350px;
+                max-height: 350px;
+            }
+            .text-content {
+                padding-right: 10px; /* Adjust for smaller screens */
+                max-width: calc(100% - 20px); /* Ensure text content does not exceed the screen width */
+            }
+            .profile-pic-container {
+                padding-right: 10px; /* Adjust for smaller screens */
+            }
+            p {
+                padding-left: 20px; /* Adjust for smaller screens */
+            }
         }
     </style>
 </head>
 <body>
-    <header>
 
-    </header>
-    <h1 style="color: black;">Hello, I'm Erika Sy</h1>
-    <p style="color: black;">Welcome to my personal website! (This website is still in the workings and nowhere near done yet, but thanks for stopping by! :))</p>
-    
-    <h1 style="color: black;">Table of Contents</h1>
-        <nav>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#resume">Resume</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#gallery">Gallery</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-        
+<div class="content">
+    <div class="text-content">
+        <h3>Hi there, I'm</h3>
+        <h1>Mark Beck</h1>
+    </div>
+    <div class="profile-pic-container">
+        <img src="profile-pic.jpg" alt="Profile Picture" class="profile-pic">
+    </div>
+</div>
 
-    </section>
-    
-    <section id="about">
-        <h2>About Me</h2>
-        <pre>I have a passion for video games, and enjoy spending time with friends. My favorite games include both multiplayer 
-adventures and puzzle games, and I have a love for poetry. I also have a deep love for animals.
-If I weren't majoring in Computer Science, I would have chosen Zoology.
+<nav>
+    <ul class="nav-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="contact.html">Contact Info</a></li> <!-- Moved Contact Info up -->
+        <li><a href="education.html">Education</a></li> <!-- Moved Education down -->
+        <li><a href="experience.html">Experience</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="gallery.html">Photo Gallery</a></li>
+    </ul>
+</nav>
 
-Guided by what I like to call "naive optimism," I relentlessly pursue my goals, 
-even if it means running headfirst into a brick wall. What might seem impossible 
-at first becomes more attainable with every step I take towards it.
-            
-If this sounds like we could be great friends, I'd love to connect!</pre>
-    </section>
-    
-    <section id="resume">
-        <h2>Resume</h2>
-        <a href="Sy, E. Résumé 2024.pdf" download>Download Resume</a>
-    </section>
-    
-    <section id="portfolio">
-        <h2>Portfolio</h2>
-        <p>[Projects]</p>
-      
-    </section>
-    <section id="gallery">
-        <h2>Gallery</h2>
-        <p>[Gallery posts]</p>
-        
-    </section>
-    <section id="contact">
-        <h2>Contact</h2>
-        
-        <p>Email: <a href="ebasy22@gmail.com">ebasy22@gmail.com</a></p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/erika-sy/">https://www.linkedin.com/in/erika-sy/</a></p>
-        <p>Github: <a href="https://github.com/nullPtrErikaS">https://github.com/nullPtrErikaS</a></p>
-    </section>
-    
-    <footer>
-        <p style="color: black;">&copy; 2024 Erika Sy. All rights reserved.</p>
-    </footer>
+<div class="text-content">
+    <p>Hi! 
+
+    I'm a Computer Science student at the University of Wisconsin, Madison, graduating in May 2026. My primary interest is Software Development, though I am enthusiastic about all areas within the CS field.
+
+    I'm excited to find a 2025 internship in software development and research where I can meet new people, apply my skills, and continue to grow.</p>
+</div>
+
 </body>
 </html>
