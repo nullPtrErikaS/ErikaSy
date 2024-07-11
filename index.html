@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>Sy, E. - Personal Website</title>
+    <title>Beck, M. - Personal Website</title>
     <link rel="icon" type="image/jpeg" href="mirio.jpg">
     <style>
         body {
@@ -21,7 +21,7 @@
             padding: 10px 20px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
             position: relative;
-            margin-top: 150px; /* Adjusted position to move the navigation bar down */
+            margin-top: 200px; /* Adjusted position to move the navigation bar down */
             border-radius: 20px; /* Rounded corners */
             overflow: hidden; /* Ensure content doesn't overflow rounded corners */
         }
@@ -72,6 +72,7 @@
         h3 {
             font-size: 1.4em;
             margin-bottom: 0.5em; /* Add space between h3 and h1 */
+            margin-top: 90px
         }
         p {
             line-height: 2;
@@ -86,9 +87,9 @@
             flex: 1;
             display: flex;
             justify-content: flex-end;
-            padding-right: 100px; /* Ensure there's space between the profile picture and the content */
+            padding-right: 100px; /* Increased padding to move the profile picture more to the right */
             align-items: center; /* Center-align the profile picture vertically */
-            margin-top: 10vh;
+            margin-top: 15vh;
         }
         .profile-pic {
             width: 50vw;
@@ -98,6 +99,23 @@
             background-color: #fff;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
             object-fit: cover;
+        }
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+            padding-left: 30px; /* Move icons more to the left */
+        }
+        .social-icons a {
+            margin: 0 15px;
+        }
+        .social-icons img {
+            width: 30px;
+            height: 30px;
+        }
+        .share-button {
+            margin-left: 10px;
+            cursor: pointer;
         }
         @media (max-width: 768px) {
             .profile-pic {
@@ -126,6 +144,23 @@
             }
         }
     </style>
+    <script>
+        function sharePage() {
+            if (navigator.share) {
+                navigator.share({
+                    title: 'Mark Beck\'s Personal Website',
+                    text: 'Check out this website!',
+                    url: window.location.href
+                }).then(() => {
+                    console.log('Successfully shared');
+                }).catch((error) => {
+                    console.error('Something went wrong sharing the page', error);
+                });
+            } else {
+                alert('Your browser does not support the native share feature. Please share manually.');
+            }
+        }
+    </script>
 </head>
 <body>
 
@@ -133,6 +168,18 @@
     <div class="text-content">
         <h3>Hi there, I'm</h3>
         <h1>Erika Sy</h1>
+        <div class="social-icons">
+            <a href="https://www.linkedin.com/in/erika-sy/">
+                <img src="linkedin-icon.png" alt="LinkedIn">
+            </a>
+            <a href="ebasy22@gmail.com">
+                <img src="email-icon.png" alt="Email">
+            </a>
+            <a href="https://github.com/nullPtrErikaS">
+                <img src="github-icon.png" alt="GitHub">
+            </a>
+            <img src="share-icon.png" alt="Share" class="share-button" onclick="sharePage()">
+        </div>
     </div>
     <div class="profile-pic-container">
         <img src="profile-pic.jpg" alt="Profile Picture" class="profile-pic">
@@ -142,8 +189,7 @@
 <nav>
     <ul class="nav-list">
         <li><a href="index.html">Home</a></li>
-        <li><a href="contact.html">Contact Info</a></li> <!-- Moved Contact Info up -->
-        <li><a href="education.html">Education</a></li> <!-- Moved Education down -->
+        <li><a href="education.html">Education</a></li>
         <li><a href="experience.html">Experience</a></li>
         <li><a href="projects.html">Projects</a></li>
         <li><a href="gallery.html">Photo Gallery</a></li>
@@ -153,7 +199,7 @@
 <div class="text-content">
     <p>Hi! 
 
-    I'm a Computer Science student at the University of Wisconsin, Madison, graduating in May 2026. My primary interest is Software Development, though I am enthusiastic about all areas within the CS field.
+    I'm a Computer Science student at the University Wisconsin - Madison, graduating in May 2026. My primary interest is Software Development, though I am enthusiastic about all areas within the CS field.
 
     I'm excited to find a 2025 internship in software development and research where I can meet new people, apply my skills, and continue to grow.</p>
 </div>
