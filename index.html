@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>Sy, E. - Personal Website</title>
+    <title>Beck, M. - Personal Website</title>
     <link rel="icon" type="image/jpeg" href="mirio.jpg">
     <style>
         body {
@@ -21,7 +21,7 @@
             padding: 10px 20px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
             position: relative;
-            margin-top: 200px; /* Adjusted position to move the navigation bar down */
+            margin-top: 150px; /* Adjusted margin */
             border-radius: 20px; /* Rounded corners */
             overflow: hidden; /* Ensure content doesn't overflow rounded corners */
         }
@@ -49,17 +49,16 @@
             display: flex;
             flex-direction: row;
             align-items: center;
-            width: 100%;
+            width: 80%; /* Matching the width of the navigation bar */
             height: 25vh; /* 1/4 of the viewport height */
             max-height: 250px; /* Maximum height for the profile picture */
-            padding: 0 10vw; /* Add some padding on the sides */
+            padding: 0; /* Removed padding */
             box-sizing: border-box; /* Include padding and border in the element's total width and height */
-            margin-top: 20vh; /* Adjusted position to move the content down */
+            margin-top: 40vh; /* Adjusted position to move the content down */
         }
         .text-content {
             flex: 1;
-            padding-right: 300px; /* Add padding to the right for headers */
-            max-width: calc(80% - 40px); /* Ensure text content does not exceed the navigation bar width */
+            padding-left: 20px; /* Add padding to the left */
             text-align: left; /* Left-align the text */
             margin-top: 0; /* Removed top margin to fit content properly */
         }
@@ -72,24 +71,26 @@
         h3 {
             font-size: 1.4em;
             margin-bottom: 0.5em; /* Add space between h3 and h1 */
-            margin-top: 90px
+        }
+        .intro-text {
+            width: 80%; /* Match the width of the navigation bar */
+            margin: 0 auto; /* Center the paragraph */
+            margin-top: 30px; /* Added margin-top to lower the navigation bar */
         }
         p {
             line-height: 2;
             font-size: 1em;
-            margin-top: 90px; /* Add space between the heading and paragraph */
+            margin-top: 20px; /* Add space between the heading and paragraph */
             text-align: center; /* Center-align the text */
-            padding-left: 100px; /* Add padding to the left for space between the screen edge and paragraph */
-            padding-right: 30px; /* Add padding to the right to avoid text from touching the edge */
-            max-width: calc(80% - 60px); /* Ensure the paragraph text stays within the navigation bar width */
+            padding: 0 90px; /* Add padding to the left and right */
+            max-width: 100%; /* Ensure the paragraph text stays within the navigation bar width */
         }
         .profile-pic-container {
             flex: 1;
             display: flex;
             justify-content: flex-end;
-            padding-right: 100px; /* Increased padding to move the profile picture more to the right */
             align-items: center; /* Center-align the profile picture vertically */
-            margin-top: 15vh;
+            padding-right: 20px; /* Add padding to the right */
         }
         .profile-pic {
             width: 50vw;
@@ -102,9 +103,8 @@
         }
         .social-icons {
             display: flex;
-            justify-content: center;
             margin-top: 20px;
-            padding-left: 30px; /* Move icons more to the left */
+            padding-left: 10px; /* Move icons more to the left */
         }
         .social-icons a {
             margin: 0 15px;
@@ -133,14 +133,14 @@
                 max-height: 350px;
             }
             .text-content {
-                padding-right: 10px; /* Adjust for smaller screens */
-                max-width: calc(100% - 20px); /* Ensure text content does not exceed the screen width */
+                padding-left: 10px; /* Adjust for smaller screens */
             }
             .profile-pic-container {
                 padding-right: 10px; /* Adjust for smaller screens */
             }
             p {
                 padding-left: 20px; /* Adjust for smaller screens */
+                padding-right: 20px; /* Adjust for smaller screens */
             }
         }
     </style>
@@ -148,7 +148,7 @@
         function sharePage() {
             if (navigator.share) {
                 navigator.share({
-                    title: 'Mark Beck\'s Personal Website',
+                    title: 'Erika Sy\'s Personal Website',
                     text: 'Check out this website!',
                     url: window.location.href
                 }).then(() => {
@@ -172,7 +172,7 @@
             <a href="https://www.linkedin.com/in/erika-sy/">
                 <img src="linkedin-icon.png" alt="LinkedIn">
             </a>
-            <a href="ebasy22@gmail.com">
+            <a href="mailto:ebasy22@gmail.com">
                 <img src="email-icon.png" alt="Email">
             </a>
             <a href="https://github.com/nullPtrErikaS">
@@ -196,10 +196,10 @@
     </ul>
 </nav>
 
-<div class="text-content">
+<div class="intro-text">
     <p>Hi! 
 
-    I'm a Computer Science student at the University Wisconsin - Madison, graduating in May 2026. My primary interest is Software Development, though I am enthusiastic about all areas within the CS field.
+    I'm a Computer Science student at the University of Florida, graduating in May 2026. My primary interest is Software Development, though I am enthusiastic about all areas within the CS field.
 
     I'm excited to find a 2025 internship in software development and research where I can meet new people, apply my skills, and continue to grow.</p>
 </div>
