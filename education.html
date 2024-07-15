@@ -1,35 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-V934GWDLFE"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-    
-      gtag('config', 'G-V934GWDLFE');
-    </script>
-    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Education - Erika Sy</title>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-V934GWDLFE"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-V934GWDLFE');
+    </script>
+
     <link rel="icon" type="image/jpeg" href="mirio.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <style>
         body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
             display: flex;
             flex-direction: column;
+            margin: 0;
+            padding: 0;
             align-items: center;
+            font-family: Arial, sans-serif;
         }
         nav {
             width: 80%;
-            background-color: #a2cffe;
+            background-color: #a2cffe; /* Light pale blue */
             padding: 10px 20px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            margin-top: 20px;
+            position: relative;
+            margin-top: 20px; /* Adjusted margin */
             border-radius: 20px;
             overflow: hidden;
         }
@@ -45,49 +48,146 @@
         }
         .nav-list a {
             text-decoration: none;
-            color: #333;
+            color: #333; /* Darker text for better contrast */
             font-size: 1em;
             padding: 5px 10px;
         }
         .nav-list a:hover {
-            background-color: #ddd;
+            background-color: #d0e9ff; /* Slightly darker pale blue on hover */
             border-radius: 5px;
         }
         .content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             width: 80%;
-            max-width: 1200px;
-            margin: 40px 0;
-            padding: 20px;
-            box-sizing: border-box;
+            margin-top: 40px;
+        }
+        .table-of-contents {
+            width: 80%; /* Match width with the content */
+            padding: 50px 20px;
+            margin-bottom: 30px; /* Space between TOC and other content */
+            background: none; /* Remove background */
+            border: none;
+            padding-left: 20px; /* Align TOC to the content */
+        }
+        .table-of-contents h2 {
+            margin: 0;
+            font-size: 1.8em;
+            color: #000; /* Black color for TOC header */
+        }
+        .table-of-contents ul {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0 0; /* Add top margin to move TOC down */
+        }
+        .table-of-contents li {
+            margin-bottom: 10px;
+        }
+        .table-of-contents a {
+            text-decoration: none;
+            color: #007bff; /* Blue color for TOC links */
+        }
+        .table-of-contents a:hover {
+            text-decoration: underline;
+        }
+        .education-header {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px; /* Space between title and education boxes */
+        }
+        h1 {
+            font-size: 2em;
+            margin: 0;
+            color: #000; /* Black color for title */
+        }
+        .education-item, .extra-curricular-item {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            width: 100%;
             background-color: #fff;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
             border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 30px; /* Space between items */
+            position: relative; /* Position relative for absolute positioned children */
         }
-        h1 {
-            font-size: 2.5em;
-            margin-bottom: 20px;
+        .education-item .school-logo, .extra-curricular-item .extra-logo {
+            width: 100px; /* Size of the logo */
+            height: auto;
+            margin-right: 20px; /* Space between logo and text */
         }
-        .education-item {
-            margin-bottom: 20px;
+        .education-item .education-details, .extra-curricular-item .education-details {
+            margin-left: 20px; /* Space between logo and text */
         }
-        .education-item h2 {
-            font-size: 1.5em;
+        .education-details h2, .education-details h3, .education-details p {
             margin: 0;
         }
-        .education-item p {
-            margin: 5px 0;
+        .education-details h2 {
+        	margin-bottom: 10px;
+            font-size: 1.5em;
         }
-        .education-item .dates {
-            color: #555;
+        .education-details h3 {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+            color: #007bff; /* Blue color for the institution name */
         }
-        .back-link {
-            display: inline-block;
-            margin-top: 20px;
+        .skills {
+            font-weight: 600; /* Semi-bold */
+            font-size: 0.9em; /* Smaller font size */
+            margin: 10px 0;
+        }
+        ul {
+            padding-left: 20px; /* Add padding to align bullets */
+            margin-top: 10px; /* Add margin-top to separate from heading */
+        }
+        li {
+            font-size: 1em;
+            line-height: 1.6;
+            margin-bottom: 10px; /* Add margin-bottom for spacing */
+        }
+        .extra-curricular {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start; /* Align to the left */
+            width: 100%;
+        }
+        .extra-curricular h2 {
+            margin: 0 0 20px 0; /* Align title to the left with margin */
+        }
+        .social-media-buttons {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            display: flex;
+            flex-direction: row; /* Arrange buttons horizontally */
+            gap: 10px; /* Space between buttons */
+        }
+        .social-button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 30px;
+            height: 30px;
+            text-align: center;
+            line-height: 30px;
+            color: #fff;
+            font-size: 1.2em; /* Increase icon size */
+            border-radius: 50%;
+            background-color: #007bff; /* Default button color */
             text-decoration: none;
-            color: #007bff;
         }
-        .back-link:hover {
-            text-decoration: underline;
+        .social-button.instagram {
+            background-color: #E4405F; /* Instagram color */
+        }
+        .social-button.linkedin {
+            background-color: #0077B5; /* LinkedIn color */
+        }
+        .social-button:hover {
+            opacity: 0.8;
         }
     </style>
 </head>
@@ -103,24 +203,161 @@
     </ul>
 </nav>
 
+<div class="table-of-contents">
+    <h2>Table of Contents</h2>
+    <ul>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#extra-curricular">Extra-Curricular Activities</a></li>
+    </ul>
+</div>
+
 <div class="content">
-    <h1>Education</h1>
-    <div class="education-item">
-        <h2>University of Wisconsin-Madison</h2>
-        <p>Bachelor of Science in Computer Science</p>
-        <p class="dates">Expected Graduation: May 2026</p>
-        <p>Relevant coursework: </p>
-        <p>Junior Year: Introduction to Artificial Intelligence, Introduction to Computer Engineering</p>
+    <div class="education-header">
+        <h1 id="education">Education</h1>
     </div>
     <div class="education-item">
-        <h2>University of Illinois-Chicago</h2>
-        <p>Bachelor of Science in Computer Science</p>
-        <p class="dates">Transfered: May 2024</p>
-        <p>Relevant coursework: </p>
-        <p>Freshman Year: Program Design 1 and 2, Discrete mathematics, Calculus 1 and 2,</p>
-        <p>.</p>
-        <p>Sophmore Year: Data Structures, Programming Practicum, Statistics 1, Calculus 3, Linear Algebra, and Physics 1</p>
+        <img src="uwm-logo.jpg" alt="University of Wisconsin Logo" class="school-logo"> <!-- School Logo -->
+        <div class="education-details">
+            <h2>Bachelor of Science in Computer Science</h2>
+            <h3>University of Wisconsin - Madison</h3>
+            <p>Expected Graduation: May 2026</p>
+            <p>Relevant Coursework:</p>
+            <ul>
+                <li>Junior Year: Introduction to Artificial Intelligence and Introduction to Computer Engineering.
+</li>
+            </ul>
+        </div>
     </div>
+    <div class="education-item">
+        <img src="uic-logo.jpg" alt="Previous College Logo" class="school-logo"> <!-- School Logo -->
+        <div class="education-details">
+            <h2>Bachelor of Science in Computer Science</h2>
+            <h3>University of Illinois - Chicago</h3>
+            <p>August 2022 - May 2024</p>
+            <p>Relevant Coursework:</p>
+            <ul>
+                <li>Freshman Year: Program Design 1 and 2, Discrete mathematics, Calculus 1 and 2.</li>
+                <li>Sophmore Year: Data Structures, Programming Practicum, Statistics 1, Calculus 3, Linear Algebra, and Physics 1.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="extra-curricular" id="extra-curricular">
+    
+        <h2>Extra-Curricular Activities</h2>
+        <div class="extra-curricular-item">
+            <img src="logica.jpg" alt="LOGICA Logo" class="extra-logo"> <!-- Extra-curricular Logo -->
+            <div class="education-details">
+            <h2>Community Coordinator and Outreach Chair</h2>
+                <h3>Latinx Organization for Growth in Computing and Academics</h3>
+                <p>July 2023 - May 2024</p>
+                <ul>
+                    <li>Managed the organization's email, event-related forms, room booking communications, and external organization relationships.
+</li>
+                </ul>
+            </div>
+            <div class="social-media-buttons">
+                <a href="https://www.instagram.com/logicaatuic/" class="social-button instagram" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.linkedin.com/company/logicaatuic/posts/?feedView=all" class="social-button linkedin" target="_blank">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <!-- Add more social media buttons as needed -->
+            </div>
+        </div>
+        
+        <div class="extra-curricular-item">
+            <img src="wics-logo.jpg" alt="WICS Logo" class="extra-logo"> <!-- Extra-curricular Logo -->
+            <div class="education-details">
+            <h2>Newletter Chair</h2>
+                <h3>Women in Computer Science</h3>
+                <p>May 2023 - May 2024</p>
+                <ul>
+                    <li>Crafted bi-weekly newsletters to inform WiCS Members about upcoming programs, workshops, and initiatives to increase engagement.</li>
+                </ul>
+            </div>
+            <div class="social-media-buttons">
+                <a href="https://www.instagram.com/wicsatuic/" class="social-button instagram" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.linkedin.com/company/women-in-computer-science-uic/posts/?feedView=all" class="social-button linkedin" target="_blank">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <!-- Add more social media buttons as needed -->
+            </div>
+        </div>
+        <!-- Add more extra-curricular activities as needed -->
+
+		<div class="extra-curricular-item">
+            <img src="sh.jpg" alt="Spark Hacks Logo" class="extra-logo"> <!-- Extra-curricular Logo -->
+            <div class="education-details">
+            <h2>Experience Organizer</h2>
+                <h3>Sparkhacks</h3>
+                <p>September 2023 - Febuary 2024</p>
+                <ul>
+                    <li>Helped orchestrated a student-run hackathon that had 300 participants collaborate, innovate, and compete over 2 days and a series of 4 prompts.
+</li>
+                </ul>
+            </div>
+            <div class="social-media-buttons">
+                <a href="https://www.instagram.com" class="social-button instagram" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.linkedin.com" class="social-button linkedin" target="_blank">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <!-- Add more social media buttons as needed -->
+            </div>
+        </div>
+        
+        <div class="extra-curricular-item">
+            <img src="acm.jpg" alt="ACM Logo" class="extra-logo"> <!-- Extra-curricular Logo -->
+            <div class="education-details">
+            <h2>Flourish Orgamizer</h2>
+                <h3>Association for Computing Machinery</h3>
+                <p>May 2023 - September 2023</p>
+                <ul>
+                    <li>Flourish was an open-source conference hosted at UIC.
+</li>
+                </ul>
+            </div>
+            <div class="social-media-buttons">
+                <a href="https://www.instagram.com" class="social-button instagram" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.linkedin.com" class="social-button linkedin" target="_blank">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <!-- Add more social media buttons as needed -->
+            </div>
+        </div>
+        
+        <div class="extra-curricular-item">
+            <img src="esw.jpg" alt="ESW Logo" class="extra-logo"> <!-- Extra-curricular Logo -->
+            <div class="education-details">
+            <h2>Member</h2>
+                <h3>
+Engineering for a Sustainable World</h3>
+                <p>March 2023 - May 2023</p>
+                <ul>
+                    <li>Help ESW build a structure for their Hydroponics system.
+</li>
+                </ul>
+            </div>
+            <div class="social-media-buttons">
+                <a href="https://www.instagram.com" class="social-button instagram" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.linkedin.com" class="social-button linkedin" target="_blank">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <!-- Add more social media buttons as needed -->
+            </div>
+        </div>
+        
+    </div>
+</div>
 
 </body>
 </html>
