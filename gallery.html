@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Gallery - Erika Sy</title>
+
+     <!-- Google tag (gtag.js) -->
+     <script async src="https://www.googletagmanager.com/gtag/js?id=G-V934GWDLFE"></script>
+     <script>
+     window.dataLayer = window.dataLayer || [];
+     function gtag(){dataLayer.push(arguments);}
+     gtag('js', new Date());
+ 
+     gtag('config', 'G-V934GWDLFE');
+     </script>
+
+    <link rel="icon" type="image/jpeg" href="mirio.jpg">
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            margin: 0;
+            padding: 0;
+            align-items: center;
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+        }
+        nav {
+            width: 80%;
+            background-color: #a2cffe; /* Light pale blue */
+            padding: 10px 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            position: relative;
+            margin-top: 20px;
+            border-radius: 20px;
+            overflow: hidden;
+        }
+        .nav-list {
+            list-style: none;
+            display: flex;
+            justify-content: space-around;
+            padding: 0;
+            margin: 0;
+        }
+        .nav-list li {
+            margin: 0;
+        }
+        .nav-list a {
+            text-decoration: none;
+            color: #333; /* Darker text for better contrast */
+            font-size: 1em;
+            padding: 5px 10px;
+        }
+        .nav-list a:hover {
+            background-color: #d0e9ff; /* Slightly darker pale blue on hover */
+            border-radius: 5px;
+        }
+        .content {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            width: 80%;
+            margin-top: 40px;
+        }
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #000; /* Black text color */
+            text-align: left; /* Left-align the heading */
+            width: 100%;
+        }
+        h2 {
+            font-size: 1.8em;
+            margin: 40px 0 20px 0; /* Increased margin for h2 */
+        }
+        .table-of-contents {
+            width: 100%;
+            margin-bottom: 40px; /* Increased margin-bottom for more space below */
+        }
+        .table-of-contents h2 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+        .table-of-contents ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .table-of-contents li {
+            margin-bottom: 10px;
+        }
+        .table-of-contents a {
+            text-decoration: none;
+            color: #007bff;
+            font-size: 1em;
+        }
+        .gallery-section {
+            width: 100%;
+            margin-bottom: 40px; /* Increased margin-bottom for more space between sections */
+        }
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 10px;
+        }
+        .grid-item {
+            width: 100%;
+            padding-bottom: 100%; /* Maintain aspect ratio */
+            background-color: #ddd;
+            border-radius: 10px;
+            position: relative;
+            overflow: hidden;
+        }
+        .grid-item img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .placeholder-text {
+            font-size: 1.5em;
+            color: #333;
+            text-align: center;
+            width: 100%;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <ul class="nav-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="education.html">Education</a></li>
+        <li><a href="experience.html">Experience</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="gallery.html">Photo Gallery</a></li>
+    </ul>
+</nav>
+
+<div class="content">
+    <h1>Photo Gallery</h1>
+    <div class="table-of-contents">
+        <h2>Table of Contents</h2>
+        <ul>
+            <li><a href="#personal-photos">Women in Computer Science</a></li>
+            <li><a href="#event-photos">Sparkhacks</a></li>
+            <li><a href="#nature-photos">LOGICA</a></li>
+        </ul>
+    </div>
+
+    <h2 id="personal-photos">Women in Computer Science</h2>
+    <div class="gallery-section">
+        <div class="grid-container">
+            <div class="grid-item">
+                <img src="placeholder.jpg" alt="Photo 1">
+            </div>
+            <div class="grid-item">
+                <img src="placeholder.jpg" alt="Photo 2">
+            </div>
+            <!-- Add more personal photos as needed -->
+        </div>
+    </div>
+
+    <h2 id="event-photos">Sparkhacks</h2>
+    <div class="gallery-section">
+        <div class="grid-container">
+            <div class="grid-item">
+                <img src="placeholder.jpg" alt="Photo 1">
+            </div>
+            <div class="grid-item">
+                <img src="placeholder.jpg" alt="Photo 2">
+            </div>
+            <!-- Add more event photos as needed -->
+        </div>
+    </div>
+
+    <h2 id="nature-photos">LOGICA</h2>
+    <div class="gallery-section">
+        <div class="grid-container">
+            <div class="grid-item">
+                <img src="placeholder.jpg" alt="Photo 1">
+            </div>
+            <div class="grid-item">
+                <img src="placeholder.jpg" alt="Photo 2">
+            </div>
+            <!-- Add more nature photos as needed -->
+        </div>
+    </div>
+
+    <p class="placeholder-text">Coming Soon</p>
+</div>
+
+</body>
+</html>
